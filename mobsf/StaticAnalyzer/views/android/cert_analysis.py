@@ -162,8 +162,8 @@ def cert_info(app_dir, app_file, man_dict):
                 'with a debug certificate.',
                 'Application signed with debug certificate'))
         if re.findall(r'Hash Algorithm: sha1', cert_info):
-            status = HIGH
-            summary[HIGH] += 1
+            status = WARNING
+            summary[WARNING] += 1
             desc = (
                 'Application is signed with SHA1withRSA. '
                 'SHA1 hash algorithm is known to have '
